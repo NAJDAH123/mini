@@ -1,0 +1,38 @@
+.info{
+    padding: 8px;
+    font-family:'philospher',sans-serif;
+    font-size: 22px;
+    color: rgb(107, 89, 93);
+    position: relative;
+    width: 50%;
+    float: left;
+    margin-left: 40px;
+    margin-bottom: 100px;
+    margin-top: 30px;
+}
+.info1{
+    margin-top: 50px;
+    margin: 20px;
+    margin-bottom: 80px;
+    position: relative;
+    width: 40%;
+    float: left;
+}
+.button{
+    font-size: 35px;
+    background-color: rgb(165, 151, 151);
+    background: linear-gradient(45deg,#b19a9eee , #703a43ee );
+    display: inline-block;
+    margin: 20px 600px;
+    margin-top: 50px;
+    padding: 5px 45px;
+    border-radius: 6px;
+}
+a{
+    text-decoration: none;
+    color: rgba(24, 24, 24);
+}
+a:hover{
+    transition: all 0.4s ease 0s;
+    color: rgb(92, 66, 66);
+}

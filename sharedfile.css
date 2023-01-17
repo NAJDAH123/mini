@@ -1,0 +1,10 @@
+body,html{
+    scroll-behavior: smooth;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    background-color: #faf0f2ee;
+    background: linear-gradient(45deg,#faf0f2ee , #c5a8adee );
+}
