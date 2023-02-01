@@ -33,7 +33,7 @@ if (isset($_POST["submit"]) && !empty($_FILES["image_file"]["name"]) && !empty($
         if (move_uploaded_file($_FILES["image_file"]["tmp_name"], $targetFilePathImg) && move_uploaded_file($_FILES["audio_file"]["tmp_name"], $targetFilePathAudio)) {
 
             // Insert image file name into database
-            $insert = $db->query("INSERT into files (image_name,audio_name,description,uploaded_on) VALUES ('" . $imgFileName . "','" . $audioFileName . "','" . $description . "', NOW())");
+            $insert = $db->query("INSERT into files (image_file,audio_file,description,uploaded_on) VALUES ('" . $imgFileName . "','" . $audioFileName . "','" . $description . "', NOW())");
 
             if ($insert) {
                 $statusMsg = "The files have been uploaded successfully.";

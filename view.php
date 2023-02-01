@@ -3,7 +3,7 @@
 include 'config.php';
 
 // Get images from the database
-$query = $db->query("SELECT * FROM images ORDER BY id DESC");
+$query = $db->query("SELECT * FROM files ORDER BY id");
 ?>
 <html>
 
@@ -38,25 +38,37 @@ $query = $db->query("SELECT * FROM images ORDER BY id DESC");
         
         <?php
         
-        $names = array("surah fatihah","surah 2","surah 3","surah 4","surah 5");
+        // $names = array("surah fatihah","surah 2","surah 3","surah 4","surah 5");
         if ($query->num_rows > 0) {
             while ($row = $query->fetch_assoc()) {
-                $imageURL = 'uploads/' . $row["file_name"];
+                $imageURL = 'uploads/images/' . $row["image_file"];
+                $audioURL = 'uploads/audios/' . $row["audio_file"];
+                $description = $row['description'];
                 $imageID = $row['id'];
-                echo $row["id"];
-               
+                $name = explode(".",$row["image_file"]);
+                 
+                
+                               
         ?>
 
                 <div class="panel panel-default">
                     <div class="panel-heading">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#<?php echo $imageID ?>" style="text-decoration:none;">
                         <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#<?php echo $imageID ?>"><?php echo $names[($imageID -1)] ?></a>
+                            <?php echo $name[0] ?>
                         </h4>
                     </div>
+                    </a>
                     <div id="<?php echo $imageID ?>" class="panel-collapse collapse in">
-                        <div class="panel-body"> <img src="<?php echo $imageURL; ?>" alt="" width="300px" height="400px" />
-                        <div class="description"></div>
-                        <div class="audio"></div>
+                        <div class="panel-body"  > <img src="<?php echo $imageURL; ?>" alt="" width="90%" style=""  height="400px" />
+                        <div class="description"><?php echo $description ?>
+                        </div>
+                        <div class="audio" style="text-align:center">
+                            <audio controls >
+                            <source src="<?php echo $audioURL ;?>" type="audio/mpeg">
+
+                            </audio>
+                        </div>
                         </div>
                     </div>
                     
