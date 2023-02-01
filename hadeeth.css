@@ -1,0 +1,27 @@
+h4 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: .2em;
+  }
+  .box div{
+    border:1px solid rgb(53, 42, 42);
+    box-shadow: 2px 3px rgb(145, 133, 133);
+    margin: 40px auto;
+    background-color: #FFFFFF;
+    overflow: auto;
+    width: 50%;
+    border-radius: 3px;
+    align-self: center;
+    font: inherit;
+    padding: 30px 30px;
+    overflow: auto;
+    opacity: 0.9;
+    color: rgb(51, 13, 13); 
+}
+
+.box p{
+    text-align: left;
+    color: rgb(43, 28, 28); 
+    font-size: large;
+ }

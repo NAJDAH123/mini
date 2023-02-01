@@ -1,0 +1,13 @@
+#arabic{
+    text-align: right;
+    font-family: 'amiri quran',sans-serif;
+    font-size: 25px;
+    background-color: rgb(209, 209, 197);
+    padding-right: 10px;
+}
+.box div{
+    width: 60%;
+    padding: 10px 30px;
+    margin-top: 5px;
+    background-color: rgb(247, 244, 242);
+}

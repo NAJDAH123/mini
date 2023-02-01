@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="sharedfile.css" rel="stylesheet">
+    <title>Admin Page</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+            height: 100vh;
+            align-items: center;
+        }
+
+        form{
+            background-color: rgb(180, 161, 168);
+            padding: 15px;
+            border-radius: 7px;
+            font-size: larger;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form">
+            <form action="upload.php" method="post" enctype="multipart/form-data">
+                Select Image File to Upload: <br><br>
+                <input type="file" name="image_file" value="choose image"><br><br>
+                Select audio File to Upload: <br><br>
+                <input type="file" name="audio_file" value="choose audio"><br><br>
+                <input type="text" name="description" placeholder="description"><br><br>
+
+                <input type="submit" name="submit" value="Upload">
+            </form>
+        </div>
+        
+    </div>
+</body>
+
+</html>
