@@ -4,53 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="sharedfile.css">
     <link rel="stylesheet" href="contact.css">
     <title>Contact Form</title>
 </head>
 <body>
-   <!-- <div class="container">
-        <form onsubmit="sendEmail(); reset(); return false;">
-            <h2>CONTACT US</h2>
-            <input type="text" id="name" placeholder="Your Name" required>
-            <input type="email" id="email" placeholder="Email id" required>
-            <input type="text" id="phone" placeholder="Phone number" required>
-            <textarea id="message" placeholder="How can we help you?" rows="4"></textarea>
-            <button type="submit" >Send</button>
-        </form>
-    </div>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script>
-        function sendEmail()
-        {
-            Email.send({
-           Host : "smtp.gmail.com",
-           Username : "ekkerinajdah@gmail.com",
-           Password : "najdah1232003",
-           To : 'narminmohtesham@gmail.com',
-           From : document.getElementById("email").value,
-           Subject : "New contact form inquiry",
-           Body : "Name: " + document.getElementById("name").value
-           + "<br> Email: " + document.getElementById("email").value
-           + "<br> Phone No: " + document.getElementById("phone").value
-           + "<br> Message: " + document.getElementById("message").value
-           }).then(
-          message => alert("Message sent succesfully")
-          );
-        }
-        </script>-->
+   
     <div class="container">
         <form id="my-form" action="https://formspree.io/f/mjvdvqjy" method="POST">
             <h2>CONTACT US</h2>
-            <input type="text" id="name" placeholder="Your Name" class="form-control" required >
-            <input type="email" id="email" placeholder="Email id" class="form-control" required>
-            <input type="text" id="phone" placeholder="Phone number" class="form-control" required>
-            <textarea id="message" placeholder="How can we help you?" rows="4" class="form-control"></textarea>
-            <button id="my-form-button" type="button">Submit</button>
+            <input type="text" id="name" name="name" placeholder="Your Name" class="form-control" required >
+            <input type="email" id="email" name="email" placeholder="Email id" class="form-control" required>
+            <input type="text" id="phone" name="phone" placeholder="Phone number" class="form-control" required>
+            <textarea id="message" name="message" placeholder="How can we help you?" rows="4" class="form-control"></textarea>
+            <button id="my-form-button" type="submit">Submit</button>
             <p id="my-form-status"></p>
         </form>
     </div>
-          Place this script at the end of the body tag -
+          <!-- Place this script at the end of the body tag -
           <script>
               var form = document.getElementById("my-form");
               
@@ -82,6 +55,9 @@
                 });
               }
               form.addEventListener("submit", handleSubmit)
-          </script>
+          </script>-->
+          <div class="last" >
+            <h3>[2023] All rights reserved- (C)QuranicTreasures - Privacy Policy</h3>   
+        </div>
 </body>
 </html>

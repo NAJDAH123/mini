@@ -67,6 +67,7 @@ li a{
     margin-bottom: 70px;
 }
 .choose{
+    display: block;
     margin-top: -40px;
     margin-bottom: -30px;
     margin-left: 50px;
@@ -123,27 +124,18 @@ footer{
 .part{
     font-family:'Raleway',sans-serif ;
     display: inline-block;
-    width: 30%;
+    width: 50%;
     text-align: center;
     font-size: 23px;
     color: rgb(134, 66, 66);
 }
 
 .foot{
-    display: inline;
-    margin: 30px;
-    
-}
+    display: flex;
+    margin: 10px;
+    justify-content: space-between;
+    }
 .foot img{
     float: left;
-    box-shadow: none;
     border: none;
-
-}
-.last h3{
-    font-family:'Raleway',sans-serif ;
-    margin-top: 30px;
-    margin-bottom: 0px;
-    padding: 7px;
-    color: rgb(0, 0, 0);
 }

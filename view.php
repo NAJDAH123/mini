@@ -17,7 +17,6 @@ $query = $db->query("SELECT * FROM files ORDER BY id");
     <link href="https://fonts.googleapis.com/css2?family=Moon+Dance&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap" rel="stylesheet">
     <link href="sharedfile.css" rel="stylesheet">
-    <link href="file2.css" rel="stylesheet">
 </head>
 
 <body>
@@ -53,15 +52,15 @@ $query = $db->query("SELECT * FROM files ORDER BY id");
 
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#<?php echo $imageID ?>" style="text-decoration:none;">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#<?php echo $imageID ?>" style="text-decoration:none;color:black;">
                         <h4 class="panel-title">
                             <?php echo $name[0] ?>
                         </h4>
                     </div>
                     </a>
                     <div id="<?php echo $imageID ?>" class="panel-collapse collapse in">
-                        <div class="panel-body"  > <img src="<?php echo $imageURL; ?>" alt="" width="90%" style=""  height="400px" />
-                        <div class="description"><?php echo $description ?>
+                        <div class="panel-body"  > <img src="<?php echo $imageURL; ?>" alt="" width="90%" style="margin-left:5%;"  height="400px" />
+                        <div class="description" style="font-size:20px;margin:20px;color:rgb(123,123,123);"><?php echo $description ?>
                         </div>
                         <div class="audio" style="text-align:center">
                             <audio controls >
@@ -81,7 +80,11 @@ $query = $db->query("SELECT * FROM files ORDER BY id");
     </div>
 
     <p>No image(s) found...</p>
+    <?php } ?>  
+    
+    <div class="last" >
+        <h3>[2023] All rights reserved- (C)QuranicTreasures - Privacy Policy</h3>   
+    </div>
 </body>
 
 </html>
-<?php } ?>
