@@ -9,8 +9,8 @@ $statusMsg = '';
 $targetDirImg = "uploads/images/";
 $targetDirAudio = "uploads/audios/";
 
-$imgFileName = basename($_FILES["image_file"]["name"]);
-$audioFileName = basename($_FILES["audio_file"]["name"]);
+$imgFileName = basename($_FILES["image_name"]["name"]);
+$audioFileName = basename($_FILES["audio_name"]["name"]);
 $description = $_POST['description'];
 
 $targetFilePathImg = $targetDirImg . $imgFileName;
@@ -21,7 +21,7 @@ $fileTypeImg = pathinfo($targetFilePathImg, PATHINFO_EXTENSION);
 $fileTypeAudio = pathinfo($targetFilePathAudio, PATHINFO_EXTENSION);
 
 
-if (isset($_POST["submit"]) && !empty($_FILES["image_file"]["name"]) && !empty($_FILES["audio_file"]["name"]) && !empty($_POST["description"])) {
+if (isset($_POST["submit"]) && !empty($_FILES["image_name"]["name"]) && !empty($_FILES["audio_name"]["name"]) && !empty($_POST["description"])) {
 
     // Allow certain file formats
     $allowTypesImg = array('jpg', 'png', 'jpeg', 'gif', 'pdf');
@@ -30,10 +30,10 @@ if (isset($_POST["submit"]) && !empty($_FILES["image_file"]["name"]) && !empty($
     if (in_array($fileTypeImg, $allowTypesImg) && in_array($fileTypeAudio, $allowTypesAudio)) {
 
         // Upload file to server
-        if (move_uploaded_file($_FILES["image_file"]["tmp_name"], $targetFilePathImg) && move_uploaded_file($_FILES["audio_file"]["tmp_name"], $targetFilePathAudio)) {
+        if (move_uploaded_file($_FILES["image_name"]["tmp_name"], $targetFilePathImg) && move_uploaded_file($_FILES["audio_name"]["tmp_name"], $targetFilePathAudio)) {
 
             // Insert image file name into database
-            $insert = $db->query("INSERT into files (image_file,audio_file,description,uploaded_on) VALUES ('" . $imgFileName . "','" . $audioFileName . "','" . $description . "', NOW())");
+            $insert = $db->query("INSERT into files (image_name,audio_name,description,uploaded_on) VALUES ('" . $imgFileName . "','" . $audioFileName . "','" . $description . "', NOW())");
 
             if ($insert) {
                 $statusMsg = "The files have been uploaded successfully.";

@@ -40,11 +40,11 @@ $query = $db->query("SELECT * FROM files ORDER BY id");
         // $names = array("surah fatihah","surah 2","surah 3","surah 4","surah 5");
         if ($query->num_rows > 0) {
             while ($row = $query->fetch_assoc()) {
-                $imageURL = 'uploads/images/' . $row["image_file"];
-                $audioURL = 'uploads/audios/' . $row["audio_file"];
+                $imageURL = 'uploads/images/' . $row["image_name"];
+                $audioURL = 'uploads/audios/' . $row["audio_name"];
                 $description = $row['description'];
                 $imageID = $row['id'];
-                $name = explode(".",$row["image_file"]);
+                $name = explode(".",$row["image_name"]);
                  
                 
                                
