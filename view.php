@@ -17,6 +17,7 @@ $query = $db->query("SELECT * FROM files ORDER BY id");
     <link href="https://fonts.googleapis.com/css2?family=Moon+Dance&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap" rel="stylesheet">
     <link href="sharedfile.css" rel="stylesheet">
+    <script src="audiocontrols.js"></script>
 </head>
 
 <body>
@@ -29,15 +30,16 @@ $query = $db->query("SELECT * FROM files ORDER BY id");
             $('.collapse').collapse()
         })
     </script> -->
+
     <div class="heading">
         <h1>Treasure Collection</h1>
     </div>
+
     <div class="panel-group" id="accordion">
         
         
         <?php
         
-        // $names = array("surah fatihah","surah 2","surah 3","surah 4","surah 5");
         if ($query->num_rows > 0) {
             while ($row = $query->fetch_assoc()) {
                 $imageURL = 'uploads/images/' . $row["image_file"];
@@ -47,13 +49,14 @@ $query = $db->query("SELECT * FROM files ORDER BY id");
                 $name = explode(".",$row["image_file"]);
                  
                 
-                               
+                           
         ?>
-
+                    
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#<?php echo $imageID ?>" style="text-decoration:none;color:black;">
-                        <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#<?php echo $imageID ?>" style="text-decoration:none;color:black;" >
+      
+                        <h4 class="panel-title"  onclick="audiocontrol(<?php echo $imageID ?>)" >
                             <?php echo $name[0] ?>
                         </h4>
                     </div>
@@ -63,8 +66,8 @@ $query = $db->query("SELECT * FROM files ORDER BY id");
                         <div class="description" style="font-size:20px;margin:20px;color:rgb(123,123,123);"><?php echo $description ?>
                         </div>
                         <div class="audio" style="text-align:center">
-                            <audio controls >
-                            <source src="<?php echo $audioURL ;?>" type="audio/mpeg">
+                            <audio controls id="<?php echo $imageID ?>">
+                            <source src="<?php echo $audioURL ;?>" type="audio/mpeg" >
 
                             </audio>
                         </div>
@@ -85,6 +88,11 @@ $query = $db->query("SELECT * FROM files ORDER BY id");
     <div class="last" >
         <h3>[2023] All rights reserved- (C)QuranicTreasures - Privacy Policy</h3>   
     </div>
+    <script>
+       
+      
+       
+    </script>
 </body>
 
 </html>

@@ -18,8 +18,13 @@
             <input type="text" id="name" name="name" placeholder="Your Name" class="form-control" required >
             <input type="email" id="email" name="email" placeholder="Email id" class="form-control" required>
             <input type="text" id="phone" name="phone" placeholder="Phone number" class="form-control" required>
+            
             <textarea id="message" name="message" placeholder="How can we help you?" rows="4" class="form-control"></textarea>
-            <button id="my-form-button" type="submit">Submit</button>
+          <div>
+            <div class="inner" style="margin-left:15px ;" ><button id="my-form-button" type="reset" >Clear</button></div>
+            <div class="inner"><button id="my-form-button" type="submit" >Submit</button></div>
+            <div class="inner"><button id="my-form-button" onclick="window.location.href='index.html';">Home</button></div>
+          </div>
             <p id="my-form-status"></p>
         </form>
     </div>
