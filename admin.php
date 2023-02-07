@@ -30,11 +30,11 @@ $query = $db->query("SELECT * FROM files ORDER BY id");
         <?php
         if ($query->num_rows > 0) {
             while ($row = $query->fetch_assoc()) {
-                $imageURL = 'uploads/images/' . $row["image_name"];
-                $audioURL = 'uploads/audios/' . $row["audio_name"];
+                $imageURL = 'uploads/images/' . $row["image_file"];
+                $audioURL = 'uploads/audios/' . $row["audio_file"];
                 $description = $row['description'];
                 $imageID = $row['id'];
-                $name = explode(".", $row["image_name"]);
+                $name = explode(".", $row["image_file"]);
 
 
 

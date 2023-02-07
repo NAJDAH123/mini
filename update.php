@@ -11,8 +11,8 @@ if ($query) {
 ?>
 
     <form action="db-save.php" method="post" enctype="multipart/form-data">
-        Picture Name: <input type="file" name="image_name"><br><br>
-        Audio Name: <input type="file" name="audio_name"><br><br>
+        Picture Name: <input type="file" name="image_file"><br><br>
+        Audio Name: <input type="file" name="audio_file"><br><br>
         Description: <input type="text" name="description" value="<?php echo $description ?>"><br><br>
         <input type="hidden" name="id" value="<?php echo $id ?>"><br><br>
 
