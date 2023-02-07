@@ -146,6 +146,11 @@ footer{
     float: left;
     border: none;
 }
+.scroll{
+    position: absolute;
+    right: 30px;
+    bottom: 20px;
+}
 
 .mybtn {
     display:none; /* Hidden by default */
